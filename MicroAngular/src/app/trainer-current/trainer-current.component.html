@@ -1,0 +1,56 @@
+<app-header-trainer></app-header-trainer>
+<div class="container mt-3">
+    <div class="row  justify-content-center">
+        <div class="col-sm-5">
+            <input type="text" class="form-control" placeholder="search" autofocus></div>
+        <div class="col-sm-auto">
+            <button type="button" class="btn btn-dark "><i class="fa fa-search "></i></button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container mt-3 elements ">
+    <div *ngFor="let display of training">
+        <div *ngIf="display.courseStatus=='current'">
+            <div class="media border p-3 mt-3" style="border-radius: 1rem; background:rgb(83, 83, 83)">
+
+
+                <div class="media-body">
+                    <div class="row align-items-center justify-content-center">
+                        <img src="../../assets/images/python.jpg" alt="c" class="mr-5 mt-2 rounded-circle"
+                            style="width:60px;">
+                        <h6 class="col-md-1 pt-3"><b>{{display.techName}}</b></h6>
+                        <span class="col-md-3 pt-3">Trainee : <span><b>{{display.user}}</b></span> </span>
+                        <span class="col-md-2 pt-3">Progress: {{display.courseProgress}}%
+
+
+                        </span>
+                        <span class="col-md-2 pt-3">Status: <div><b>{{display.courseStatus}}</b></div></span>
+                        <span class="col-md-2 pt-3"><button class="btn btn-primary" (click)=onResume()>Resume
+                                course</button> </span>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>

@@ -1,0 +1,47 @@
+<app-admin-header></app-admin-header>
+<div class="container justify-content-between mt-4">
+
+        <div class="row align-items-center justify-content-center">
+    <div class="form-group ">
+        <input type="text" id="textSearch" class="form-control" placeholder="serach" width="10%" autofocus>
+        
+    </div>
+    <button style="background-color: #3b3a37; color: white" type="button" class="btn  ml-2 mb-3"
+              ><span class="fa fa-search"></span></button>
+</div>
+</div>
+
+<div class="container mt-4">
+    <table class="table">
+
+
+
+        <thead class="thead-dark">
+            <tr>
+                <th>Trainee</th>
+                <th>Course</th>
+                <th>Trainer</th>
+                <th>Fee</th>
+                <th>Commission</th>
+                <th>Payment Date</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr  *ngFor="let display of result">
+                <td>{{display.name}}</td>
+                <td>{{display.Course}}</td>
+                <td>{{display.trainer}}
+                </td>
+                <td>&#8377;{{display.fee}}</td>
+                <td>{{display.commision}}%</td>
+                <td>{{display.date}}</td>
+            </tr>
+
+           
+        </tbody>
+    </table>
+
+
+
+</div>

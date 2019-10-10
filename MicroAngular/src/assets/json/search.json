@@ -1,0 +1,24 @@
+[{
+    "image":"./images/male1.png",
+    "name":"Mr Harry Potter",
+    "star1":"checked",
+    "star2":"checked",
+    "star3":"checked",
+    "star4":"",
+    "star5":"",
+    "technologies":"Technologies known: Spring ,java,Angular",
+    "number":"12"
+
+ },
+ {"image":"./images/male1.png",
+    "name":"Ms Hermionie Grainger",
+    "star1":"checked",
+    "star2":"checked",
+    "star3":"checked",
+    "star4":"checked",
+    "star5":"",
+    "technologies":"Technologies known: Python,java,Angular",
+    "number":"7"
+
+ }
+]

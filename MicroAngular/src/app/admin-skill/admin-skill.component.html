@@ -1,0 +1,42 @@
+<app-admin-header></app-admin-header>
+<div class="container mt-4">
+        <form  [formGroup]="signinForm" >
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                        
+                    <th>Technology</th>
+                    <th>Fee</th>
+                    <th>Commission</th>
+                    <th>Action</th>
+                  </tr>
+            
+            </thead>
+            <tbody>
+                <tr *ngFor="let display of temp">
+                
+                    <td>{{display.techname}}</td>
+                    <td>&#8377;{{display.fee}}</td>
+                    <td>{{display.commission}}%</td>
+                    <td>
+                        <button class="btn btn-danger m-1 p-1" (click)="onDelete(display.id)">Delete</button>
+                    </td>
+                  </tr>
+
+                  
+                  <tr>
+                      
+                    <td><input type="text" placeholder="technology" formControlName="technology"></td>
+                    <td><input type="text" placeholder="rate" formControlName="fee"></td>
+                    <td><input type="text" placeholder="commission" formControlName="commission"></td>
+                    <td><button class="btn btn-success m-1 p-1" type="submit"(click)="onSubmit(signinForm.value)">Add</button>
+                    </td>
+                  </tr>
+                
+            </tbody>
+        </table>
+    </form>
+        <br>
+        <br>
+        <br>
+    </div>

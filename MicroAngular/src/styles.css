@@ -1,0 +1,75 @@
+#head {
+    margin-left: 50px;
+  }
+  header{
+    opacity: 0.8;
+  }
+  .message{
+    /* padding: 100px 0px 0px 30px;
+    color:white; */
+    width: 600px;
+    color: white;
+    /* border: 5px solid green; */
+    padding: 0px 0px 0px 0px;
+    margin: 100px 0px 0px 375px;
+    background-color: #343a40;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .checked{
+    color: orange;
+  }
+ 
+  .elements{
+    color: white;
+  }
+  .bg {
+    background-image: url("../src/assets/images/desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 15.4rem;
+    height: 100%;
+  }
+
+  
+  .input-group.md-form.form-sm.form-2 input {
+  border: 1px solid #bdbdbd;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  }
+  
+  
+    .modal-header, h4, .close {
+      background-color:black;
+      color:white !important;
+      text-align: left;
+      font-size: 30px;
+    }
+    .modal-footer {
+      background-color: #f9f9f9;
+    }
+  
+    #signup:hover{
+      color:blue;
+    }
+    .page-footer{
+      opacity: 0.8;
+    }
+    #msform {
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      position: relative;
+    }
+    #msform input, #msform textarea {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: montserrat;
+      color: #2C3E50;
+      font-size: 13px;
+    }

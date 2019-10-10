@@ -1,0 +1,32 @@
+<app-header-trainer></app-header-trainer>
+
+<div class="container border mt-3">
+    <div class="row justify-content-center border bg-light pt-2">
+        <h3>Your Skills</h3>
+    </div>
+    <div class="row justify-content-center mt-3 p-3" *ngFor="let display of skill">
+        <div class="col-sm-auto"><button type="button" class="btn btn-dark">{{display.skill}}</button></div>
+    </div>
+</div>
+<div class="container border mt-3">
+        <form [formGroup]="skillForm">
+    <div class="row justify-content-center border bg-light pt-2">
+        <h3>Available Technologies</h3>
+    </div>
+    
+        
+
+            <div class="row justify-content-center mt-3 p-3" >
+                <select formControlName="skill">
+                    <option value={{i}} *ngFor="let display of temp; let i = index">{{display.techname}}</option>  
+                </select>
+                <div class="col-sm-auto"><button type="button" class="btn btn-dark" (click)="onAdd()">Add</button></div>
+                
+
+            </div>
+        
+    </form>
+</div>
+<br>
+<br>
+<br>

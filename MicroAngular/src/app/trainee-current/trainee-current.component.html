@@ -1,0 +1,35 @@
+<app-header-login></app-header-login>
+<div class="container mt-3 elements">
+    <div *ngFor="let display of training">
+        <div *ngIf="display.courseStatus=='current'">
+            <div class="media border p-3 mt-3" style="border-radius: 1rem; background:rgb(83, 83, 83)">
+
+
+                <div class="media-body">
+                    <div class="row align-items-center justify-content-center">
+                        <img src="../../assets/images/python.jpg" alt="c" class="mr-5 mt-2 rounded-circle"
+                            style="width:60px;">
+                        <h6 class="col-md-1 pt-3"><b>{{display.techName}}</b></h6>
+                        <span class="col-md-3 pt-3">Trainer : <span><b>{{display.mentor}}</b></span> </span>
+                        <span class="col-md-2 pt-3"><button class="btn btn-primary">Update
+                                progress</button></span>
+                       
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>

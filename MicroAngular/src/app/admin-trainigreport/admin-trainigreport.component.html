@@ -1,0 +1,49 @@
+<app-admin-header></app-admin-header>
+<div class="container justify-content-between mt-4">
+
+        <div class="row align-items-center justify-content-center">
+    <div class="form-group ">
+        <input type="text" id="textSearch" class="form-control" placeholder="serach" width="10%" autofocus>
+        
+    </div>
+    <button style="background-color: #3b3a37; color: white" type="button" class="btn  ml-2 mb-3"
+              ><span class="fa fa-search"></span></button>
+</div>
+</div>
+
+<div class="container mt-4">
+    <table class="table">
+
+
+
+        <thead class="thead-dark">
+            <tr>
+                <th>Trainee</th>
+                <th>Course</th>
+                <th>Trainer</th>
+                <th>Progress</th>
+       
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let display of result">
+                <td>{{display.name}}</td>
+                <td>{{display.course}}</td>
+                <td>{{display.trainer}}
+                </td>
+                <td><div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                            aria-valuemax="100" [style.width]="display.progress+'%'">
+                            {{display.progress}}%
+                        </div>
+                    </div></td>
+            </tr>
+
+           
+        </tbody>
+    </table>
+
+
+
+</div>

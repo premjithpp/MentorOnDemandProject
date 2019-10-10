@@ -1,0 +1,18 @@
+[{
+   "name":"Anitha Pathadan",
+   "course":"Spring",
+   "trainer":"Harry Potter",
+   "progress":"90"
+},
+{
+    "name":"Sharon Paul",
+    "course":"Java",
+    "trainer":"Hermionie Gringer",
+    "progress":"20"
+},
+{
+    "name":"Steny Jose",
+   "course":"Angular",
+   "trainer":"Harry Potter",
+   "progress":"50"
+}]

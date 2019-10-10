@@ -1,0 +1,76 @@
+<header id="heading">
+    <div class="navbar navbar navbar-dark bg-dark justify-content-between">
+        <div class="row">
+            <a class="navbar-brand" style="color: white"><span id="head">Mentor On Demand</span></a>
+        </div>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link " href="#"><span style="padding: 7px;"
+                    class="fa fa-home"></span>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="search"><i class="fa fa-search"></i>Search Trainer</a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal" id="loginbtn"><span style="padding: 7px;"
+                    class="fa fa-sign-in"></span>Sign in</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container">
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;">
+                    <h5><span class="fa fa-lock"></span> Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body" style="padding:40px 50px;">
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+                        
+                        <label for="usrname"><span class="fa fa-user-circle-o"></span> Username</label>
+                        <input type="email" class="form-control" id="usrname" placeholder="Enter email"
+                            formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">Username is required</div>
+                               
+                            </div>
+                      
+                        <label for="psw"><span class="fa fa-eye" required></span> Password</label>
+                        <input type="password" class="form-control" id="psw" placeholder="Enter password"
+                            formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                            </div>
+
+                        <label for="category"><span class="fa fa-questionmark"></span> Category</label>
+                        <select name="category" id="category" class="form-control" formControlName="category">
+                            <option value="trainer">Trainer</option>
+                            <option value="trainee" selected>Trainee</option>
+                        </select>
+
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked formControlName="check">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-block"><span class="fa fa-sign-in"></span>
+                            Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Not a member? <a id="signup" routerLink='/trainee-signup' data-dismiss="modal">Sign Up</a></p>
+                    <p> <a routerLink='/trainer-signup' data-dismiss="modal">Signup as a Trainer</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

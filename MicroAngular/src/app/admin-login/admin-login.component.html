@@ -1,0 +1,32 @@
+<app-header-signup></app-header-signup>
+<form id="msform" class="border p-4 mb-4" [formGroup]="signinForm" (ngSubmit)="onSubmit(signinForm.value)">
+    <h2 class="fs-title">Admin Login</h2>
+    <div class="form-group">
+        <input type="text" name="uname" placeholder="User Name" class="form-control" formControlName="username"
+            [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" class="form-control" placeholder="password" formControlName="password"
+            [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">password is required</div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+
+        <input type="submit" name="submit" class="signupbtn submit action-button btn-dark " value="Submit"
+            style="color: white;" />
+    </div>
+
+</form><br>
+<br>

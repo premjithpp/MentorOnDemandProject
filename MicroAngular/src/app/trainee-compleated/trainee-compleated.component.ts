@@ -19,7 +19,7 @@ training:Training[]=[];
     console.log(this.id);
       this.trainingService.getTrainerTraining(this.id).subscribe(data => {
         this.training = data;
-        console.log(this.training);
+        
       });
   }
  

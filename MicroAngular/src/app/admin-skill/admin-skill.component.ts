@@ -38,13 +38,21 @@ onSubmit(){
 this.technology.techname=this.signinForm.get('technology').value;
 this.technology.fee=this.signinForm.get('fee').value;
 this.technology.commission=this.signinForm.get('commission').value;
-this.adminService.addTechnology(this.technology).subscribe(data => console.log(data), error => console.log(error));
-alert("Added Successfully!!!");
-this.router.navigateByUrl('/admin-skill');
+this.adminService.addTechnology(this.technology).subscribe(data => {console.log(data), error => console.log(error)
+
+  this.ngOnInit();
+});
+
+
 }
 
 onDelete(id:number){
-  this.adminService.deleteTech(id).subscribe(data => console.log(data), error => console.log(error));
-  alert("data removed");
+  
+  this.adminService.deleteTech(id).subscribe(data => {console.log(data), error => console.log(error)
+    this.ngOnInit();
+  });
+  
+  
+
 }
 }

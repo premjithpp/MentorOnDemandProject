@@ -45,7 +45,7 @@ trainer:Trainer=new Trainer();
           if(this.trainer==null){
             alert("Invalid credentials");
           } 
-          else if(this.trainer.email == this.loginForm.get('username').value && this.trainer.password==this.loginForm.get('password').value) {
+          else if(this.trainer.email == this.loginForm.get('username').value && this.trainer.password==this.loginForm.get('password').value && this.trainer.active=='unblock') {
             localStorage.setItem("trainerId",String(this.trainer.id))
             this.router.navigateByUrl('/trainer-landing');
           }
@@ -60,7 +60,7 @@ trainer:Trainer=new Trainer();
           if(this.trainee==null){
             alert("Invalid credentials");
           } 
-          else if(this.trainee.email == this.loginForm.get('username').value && this.trainee.password==this.loginForm.get('password').value) {
+          else if(this.trainee.email == this.loginForm.get('username').value && this.trainee.password==this.loginForm.get('password').value && this.trainee.active=='unblock') {
             localStorage.setItem("traineeId",String(this.trainee.id))
             this.router.navigateByUrl('/trainee-landing');
           }

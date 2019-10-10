@@ -53,6 +53,14 @@ public class TrainerController {
 	    public List<TrainerSkills> tech(){
 	        return trainerService.getSkills();
 	    }
-
+	 
+	 @RequestMapping("/trainers")
+	    public List<TrainerDetails> viewTrainers(){
+	        return trainerService.getTrainer();
+	    }
+	 @RequestMapping(method=RequestMethod.PUT,value="/update-action/{id}")
+		public void updateCourse(@RequestBody TrainerDetails cd, @PathVariable Long id) {
+			trainerService.updateAction(cd, id);
+		}
 
 }

@@ -9,4 +9,5 @@ id:number;
     linkdin:string;
     email:string;
     password:string;
+    active:string;
 }

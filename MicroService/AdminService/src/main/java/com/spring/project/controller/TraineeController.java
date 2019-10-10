@@ -28,12 +28,12 @@ public class TraineeController {
 
 
 
-	@RequestMapping("/admin/{id}")
+	@RequestMapping("/skillId/{id}")
     public Technology userId(@PathVariable long id){
         return adminService.userId(id);
     }
 	
-	@RequestMapping("/skillid/{userName}")
+	@RequestMapping("/admin/{userName}")
     public AdminCredentials adminName(@PathVariable String userName){
         return adminService.adminName(userName);
     }

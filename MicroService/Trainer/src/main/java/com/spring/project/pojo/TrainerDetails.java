@@ -25,6 +25,8 @@ public class TrainerDetails {
 	private String qualification;
 	@Column(name="skills")
 	private String skills ;
+	@Column(name="active")
+	private String active="unblock";
 	@Column(name="linkdin")
 	private String linkdin;
 	@Column(name="email")
@@ -91,8 +93,16 @@ public class TrainerDetails {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	
+	public String getActive() {
+		return active;
+	}
+	public void setActive(String active) {
+		this.active = active;
+	}
 	public TrainerDetails(long id, String firstname, String lastname, long phone, int age, String qualification,
-			String skills, String linkdin, String email, String password) {
+			String skills, String linkdin, String email, String password,String active) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
@@ -104,6 +114,7 @@ public class TrainerDetails {
 		this.linkdin = linkdin;
 		this.email = email;
 		this.password = password;
+		this.active=active;
 	}
 	public TrainerDetails() {
 		super();

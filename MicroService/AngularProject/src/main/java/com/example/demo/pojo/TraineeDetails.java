@@ -23,7 +23,8 @@ public class TraineeDetails {
 	private String email;
 	@Column(name="password")
 	private String password;
-
+@Column(name="active")
+private String active="unblock";
 	public String getFirstname() {
 		return firstname;
 	}
@@ -66,10 +67,26 @@ public class TraineeDetails {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public TraineeDetails( String firstname, String lastname, long phone, int age, String linkdin, String email,
-			String password) {
+	
+	
+	public String getActive() {
+		return active;
+	}
+	public void setActive(String active) {
+		this.active = active;
+	}
+	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public TraineeDetails( long id,String firstname, String lastname, long phone, int age, String linkdin, String email,
+			String password,String active) {
 		super();
-
+this.id=id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.phone = phone;
@@ -77,6 +94,7 @@ public class TraineeDetails {
 		this.linkdin = linkdin;
 		this.email = email;
 		this.password = password;
+		this.active=active;
 	}
 	public TraineeDetails() {
 		super();

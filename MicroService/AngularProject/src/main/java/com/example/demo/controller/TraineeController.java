@@ -1,27 +1,26 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.pojo.AdminCredentials;
 import com.example.demo.pojo.TraineeDetails;
-import com.example.demo.pojo.TrainerDetails;
+
 import com.example.demo.repo.TraineeRepo;
-import com.example.demo.repo.TrainerRepo;
-import com.example.demo.service.AdminService;
+
 import com.example.demo.service.TraineeService;
-import com.example.demo.service.TrainerService;
+
+
+
 @EnableEurekaClient
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class TraineeController {
 	@Autowired
 	 TraineeService service;
-	@Autowired
-	TrainerService trainerService;
-	@Autowired
-	AdminService adminService;
+	
 	
 	@RequestMapping(method = RequestMethod.POST,value = "/trainee-signup")
 	  public void postTrainee(@RequestBody TraineeDetails trainee) {
@@ -39,6 +38,14 @@ public class TraineeController {
         return service.getName(id);
     }
 	
-	
+	 @RequestMapping(method=RequestMethod.PUT,value="/update-action/{id}")
+		public void updateCourse(@RequestBody TraineeDetails cd, @PathVariable long id) {
+			service.updateAction(cd, id);
+		}
+	 
+	 @RequestMapping("/trainees")
+	    public List<TraineeDetails> viewTrainers(){
+	        return service.getTrainee();
+	    }
 	
 }

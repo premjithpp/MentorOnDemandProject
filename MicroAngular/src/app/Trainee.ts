@@ -7,5 +7,6 @@ export class Trainee {
     linkdin:string;
     email:string;
     password:string;
+    active:string;
 
 }

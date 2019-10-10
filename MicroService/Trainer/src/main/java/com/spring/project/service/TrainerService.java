@@ -6,7 +6,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import com.spring.project.pojo.TrainerDetails;
 import com.spring.project.pojo.TrainerSkills;
 import com.spring.project.repo.TrainerRepo;
@@ -57,6 +56,15 @@ public void addSkill(TrainerSkills t ) {
 public void deleteSkill(Long id) {
 
     skillRepo.deleteById(id);
+}
+
+
+public void updateAction(TrainerDetails trainer,long id) {
+	TrainerDetails td= repo.findById(id).orElse(null);
+	if(td !=null) {
+		td.setActive(trainer.getActive());
+	}
+	repo.save(td);
 }
 
 }

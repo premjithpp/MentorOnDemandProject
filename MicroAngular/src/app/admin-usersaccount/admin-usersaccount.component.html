@@ -11,19 +11,15 @@
 
             </thead>
             <tbody>
-                <tr>
-                    <td>Anitha Pathadan</td>
-                    <td>anithapathadan@gmail.com</td>
-                    <td><button class="btn btn-primary m-1 p-1">block</button>
+                <tr *ngFor="let display of traineeList; let i = index">
+                    <td>{{display.firstname}}</td>
+                    <td>{{display.email}}</td>
+                    <td><button class="btn btn-danger m-1 p-1"(click)="onTraineeBlock(i)">{{display.active}}</button>
                     </td>
+                    
                 </tr>
 
-                <tr>
-                    <td>Sharon Paul</td>
-                    <td>sharonpaul@gmail.com</td>
-                    <td><button class="btn btn-danger m-1 p-1">Unblock</button>
-                    </td>
-                </tr>
+                
             </tbody>
         </table>
 
@@ -39,19 +35,14 @@
     
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Harry Potter</td>
-                        <td>harrypotter@gmail.com</td>
-                        <td><button class="btn btn-primary m-1 p-1">block</button>
+                    <tr *ngFor="let display of trainerList; let i= index">
+                        <td>{{display.firstname}}</td>
+                        <td>{{display.email}}</td>
+                        <td><button class="btn btn-danger m-1 p-1" (click)="onTrainerBlock(i)">{{display.active}}</button>
                         </td>
                     </tr>
     
-                    <tr>
-                        <td>Ron Weasley</td>
-                        <td>ronweasley@gmail.com</td>
-                        <td><button class="btn btn-danger m-1 p-1">Unblock</button>
-                        </td>
-                    </tr>
+                    
                 </tbody>
             </table>
     </div>

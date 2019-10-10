@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.repo.*;
+
 import com.example.demo.pojo.*;
 @Service
 public class TraineeService {
@@ -32,6 +33,14 @@ public TraineeDetails getUsersUserName(String userName) {
 public TraineeDetails getName(Long id) {
 
     return repo.findById(id).orElse(null);
+}
+
+public void updateAction(TraineeDetails trainee,long id) {
+	TraineeDetails td= repo.findById(id).orElse(null);
+	if(td !=null) {
+		td.setActive(trainee.getActive());
+	}
+	repo.save(td);
 }
 
 }

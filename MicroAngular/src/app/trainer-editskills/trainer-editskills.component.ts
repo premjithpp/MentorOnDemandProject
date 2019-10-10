@@ -48,9 +48,9 @@ onAdd(){
   this.trainerskill.skill=this.temp[this.i].techname;
  this.trainerskill.trainerId=Number(localStorage.getItem("trainerId"));
  this.trainerskill.skillId=  this.temp[this.i].id;
- console.log(this.trainerskill);
   this.trainerService.addSkills(this.trainerskill).subscribe(data => console.log(data), error => console.log(error));
   alert("Added Successfully!!!");
+  this.ngOnInit();
 
 
 }
